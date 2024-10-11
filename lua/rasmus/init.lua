@@ -118,7 +118,7 @@ local set_groups = function()
     Macro = { fg = c.blue }, -- same as Define
     Typedef = { fg = c.cyan }, -- A typedef
     PreCondit = { fg = c.cyan }, -- preprocessor #if, #else, #endif, etc.
-    Special = { fg = c.blue, bg = c.none, italic = true }, -- any special symbol
+    Special = { fg = c.blue, bg = c.none }, -- any special symbol
     SpecialChar = { fg = c.cyan }, -- special character in a constant
     Tag = { fg = c.yellow }, -- you can use CTRL-] on this
     Delimiter = { fg = c.gray07 }, -- character that needs attention like , or .
@@ -182,7 +182,7 @@ local set_groups = function()
     TSComment = { fg = c.gray05, bg = c.none, bold = cfg.comment_style.bold, italic = cfg.comment_style.italic }, -- For comment blocks.
     TSConditional = { fg = c.blue, bold = cfg.keyword_style.bold, italic = cfg.keyword_style.italic }, -- For keywords related to conditionnals.
     TSConstant = { fg = c.fg }, -- For constants
-    TSConstBuiltin = { fg = c.cyan, italic = true }, -- For constants that are built in the language: `nil` in Lua.
+    TSConstBuiltin = { fg = c.cyan }, -- For constants that are built in the language: `nil` in Lua.
     TSConstMacro = { fg = c.cyan }, -- For constants that are defined by macros: `NULL` in C.
     TSConstructor = { fg = c.gray07 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     TSError = { fg = c.red }, -- For syntax/parser errors.
@@ -192,7 +192,7 @@ local set_groups = function()
     TSFunction = { fg = c.fg, bold = cfg.function_style.bold, italic = cfg.function_style.italic }, -- For fuction (calls and definitions).
     TSFuncBuiltin = { fg = c.fg, bold = cfg.function_style.bold, italic = cfg.function_style.italic }, -- For builtin functions: `table.insert` in Lua.
     TSFuncMacro = { fg = c.blue }, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-    TSInclude = { fg = c.blue, italic = true }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+    TSInclude = { fg = c.blue }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
     TSKeyword = { fg = c.blue, bold = cfg.keyword_style.bold, italic = cfg.keyword_style.italic }, -- For keywords that don't fall in previous categories.
     TSKeywordFunction = { fg = c.blue, bold = cfg.function_style.bold, italic = cfg.function_style.italic }, -- For keywords used to define a fuction.
     TSKeywordOperator = { fg = c.yellow }, -- For operators that are English words, e.g. `and`, `as`, `or`.
@@ -216,11 +216,11 @@ local set_groups = function()
     TSStringSpecial = { fg = c.green }, -- For strings with special meaning that don't fit into the above categories.
     TSSymbol = { fg = c.green }, -- For identifiers referring to symbols or atoms.
     TSTag = { fg = c.yellow }, -- Tags like html tag names.
-    TSTagAttribute = { fg = c.fg, italic = true }, -- For html tag attributes.
+    TSTagAttribute = { fg = c.fg }, -- For html tag attributes.
     TSTagDelimiter = { fg = c.gray05 }, -- Tag delimiter like `<` `>` `/`
     TSText = { fg = c.fg }, -- For strings considered text in a markup language.
     TSStrong = { fg = c.bright_white, bold = true }, -- For text to be represented in bold.
-    TSEmphasis = { fg = c.bright_white, bold = true, italic = true }, -- For text to be represented with emphasis.
+    TSEmphasis = { fg = c.bright_white, bold = true }, -- For text to be represented with emphasis.
     TSUnderline = { fg = c.bright_white, bg = c.none, underline = true }, -- For text to be represented with an underline.
     TSStrike = {}, -- For strikethrough text.
     TSTitle = { fg = c.fg, bg = c.none, bold = true }, -- Text that is part of a title.
@@ -230,9 +230,9 @@ local set_groups = function()
     TSTextReference = { fg = c.yellow }, -- For footnotes, text references, citations.
     TSEnvironment = { fg = c.blue }, -- For text environments of markup languages.
     TSEnvironmentName = { fg = c.bright_blue }, -- For the name/the string indicating the type of text environment.
-    TSNote = { fg = c.blue, italic = true }, -- Text representation of an informational note.
-    TSWarning = { fg = c.yellow, italic = true }, -- Text representation of a warning note.
-    TSDanger = { fg = c.red, italic = true }, -- Text representation of a danger note.
+    TSNote = { fg = c.blue }, -- Text representation of an informational note.
+    TSWarning = { fg = c.yellow }, -- Text representation of a warning note.
+    TSDanger = { fg = c.red }, -- Text representation of a danger note.
     TSType = { fg = c.fg }, -- For types.
     TSTypeBuiltin = { fg = c.blue }, -- For builtin types.
     TSVariable = { fg = c.fg, bold = cfg.variable_style.bold, italic = cfg.variable_style.italic }, -- Any variable name that does not have another highlight.
